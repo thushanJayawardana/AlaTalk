@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="621.0" prefWidth="658.0" style="-fx-background-color: #52BE80; -fx-background-radius: 30; rad: ;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="enterMessageField" layoutX="107.0" layoutY="539.0" prefHeight="35.0" prefWidth="426.0" promptText="Enter your message here" style="-fx-background-radius: 30;">
+         <font>
+            <Font name="Ubuntu" size="13.0" />
+         </font></TextField>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="530.0" layoutY="536.0" maxWidth="35.0" onAction="#imageInsertBtnOnAction" prefHeight="35.0">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/attach.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="emojiButton" contentDisplay="GRAPHIC_ONLY" layoutX="55.0" layoutY="535.0" maxWidth="35.0" prefHeight="35.0">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/emoji.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ScrollPane fx:id="scrollPane" layoutX="48.0" layoutY="110.0" prefHeight="406.0" prefWidth="570.0" style="-fx-background-radius: 30;">
+         <content>
+            <VBox fx:id="vBox" prefHeight="403.0" prefWidth="568.0" style="-fx-background-radius: 30;" />
+         </content>
+      </ScrollPane>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="562.0" layoutY="526.0" maxWidth="40.0" onAction="#sendMsgBtnOnAction" prefHeight="40.0">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-sent-96.png" />
+               </image>
+               <effect>
+                  <Glow level="0.4" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="138.0" fitWidth="150.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/alatalk-high-resolution-logo-transparent.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="53.0" layoutY="84.0" text="Chats">
+         <font>
+            <Font name="Ubuntu Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
